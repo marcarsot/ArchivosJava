@@ -8,8 +8,7 @@ import java.util.Scanner;
 public class MantencionUsuarios {
     
 
-    @SuppressWarnings("empty-statement")
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         //para leer datos por teclado
         Scanner leer = new Scanner(System.in);
         //crear una lista para guardar usuarios
@@ -22,6 +21,17 @@ public class MantencionUsuarios {
         //se recorre la cantidad para agregar a lista
         for(int i = 0; i <cantUsuarios; i++){
             indicador = i+1;
+            if (cantUsuarios>10){
+                System.out.println("Cantidad excede maximo de '10', favor reingresar: ");
+                cantUsuarios=leer.nextInt();
+                while(cantUsuarios>10){
+                    System.out.println("Cantidad excede maximo '10', favro reingresar: ");
+                    cantUsuarios=leer.nextInt();
+                }
+
+            }else{
+                Usuario usu= new Usuario();
+            }
             
             Usuario usu = new Usuario();
             
